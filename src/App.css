@@ -151,7 +151,7 @@
     
 }
 
-#ascending-bttn:focus, #descending-bttn:focus, #reset-bttn:focus
+#ascending-bttn:disabled, #descending-bttn:disabled, #reset-bttn:active
 { background:rgb(205, 157, 0) !important }
 
 

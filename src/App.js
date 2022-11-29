@@ -92,16 +92,17 @@ function App() {
   const [sortType, setSortType] = useState("Default");
   
   function handleAscendingSort(eventKey) {
-    setSortType(eventKey);
+    setSortType("A");
     ascOrder();
   }
   function handleDescendingSort(eventKey) {
-    setSortType(eventKey);
+    setSortType("D");
     descOrder();
   }
 
   function resetSort() {
     setSortedGallery([...productGallery]);
+    setSortType("Default")
   }
 
   function ascOrder() {
@@ -129,13 +130,14 @@ function App() {
           a diverse selection of mediums!
         </p>
       </Row>
-     
+
+      {console.log(sortType)}
     
       <Row className="sort-row">
         <div className="sort-container">
           <h1 className="sort-price-title"> Sort Price By:  </h1>
-          <Button onClick={handleAscendingSort} className="btn btn-warning mb-4" id="ascending-bttn"> Ascending Order</Button>
-          <Button onClick={handleDescendingSort} className="btn btn-warning mb-4"id="descending-bttn"> Descending Order</Button>
+          <Button onClick={handleAscendingSort} className="btn btn-warning mb-4" id="ascending-bttn" disabled={sortType==="A"}> Ascending Order</Button>
+          <Button onClick={handleDescendingSort} className="btn btn-warning mb-4"id="descending-bttn" disabled={sortType==="D"}> Descending Order</Button>
           <Button onClick={()=>resetSort()} className="btn btn-warning mb-4" id="reset-bttn">  Reset </Button>
         </div>
       </Row>
