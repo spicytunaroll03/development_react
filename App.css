@@ -1,0 +1,21 @@
+/* Add styling for your page here */
+
+.App {
+
+}
+
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
